@@ -12,6 +12,7 @@ void Bubblesort(int a[],int n){
     }
     
 }
+
 void Selectionsort(int a[],int n){
     int min;
     int m;
@@ -26,6 +27,7 @@ void Selectionsort(int a[],int n){
         cout << endl;
     }
 }
+
 void Insertionsort(int a[],int n){
     int key;
     for(int i=1;i<n;i++){
@@ -68,6 +70,7 @@ void Quicksort(int a[], int low, int high,int n) {
     Quicksort(a, low, j - 1,n); 
     Quicksort(a, j + 1, high,n); 
 }
+
 void Merge(int a[], int low, int mid, int high) {
     int n1 = mid - low + 1;   
     int n2 = high - mid;      
@@ -91,6 +94,7 @@ void Merge(int a[], int low, int mid, int high) {
     while (i < n1) a[k++] = L[i++];
     while (j < n2) a[k++] = R[j++];
 }
+
 void Mergesort(int a[],int low,int high,int n){
     if(low == high) return;
     int mid=(low+high)/2;
@@ -105,14 +109,3 @@ void Mergesort(int a[],int low,int high,int n){
     cout << endl;
 }
 
-
-int main(){
-    int a[10] ={6,4,8,3,5,2,7,1,9,0};
-    /*Bubblesort(a,10);
-    Selectionsort(a,10);
-    Insertionsort(a,10);
-    Quicksort(a,0,9,10);
-    Mergesort(a,0,9,10);*/
-    cout << "END";
-    cout << "\nOk con dê";
-}
