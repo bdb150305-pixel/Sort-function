@@ -11,5 +11,6 @@ int main() {
     Quicksort(a,0,9,10);
     Mergesort(a,0,9,10);
     cout << "END";
+    cout << endl<< "Xong roi ne!" << endl;
     return 0;
 }
