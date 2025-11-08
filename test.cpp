@@ -3,14 +3,14 @@
 #include <vector>
 #include <chrono>
 #include <cassert>
-#include "sort.h" // file chứa khai báo các hàm sort
+#include "sort.h" 
 
 using namespace std;
 using namespace std::chrono;
 
 
 
-// Khai báo các hàm sắp xếp từ sort.cpp
+
 void Bubblesort(int a[], int n);
 void Selectionsort(int a[], int n);
 void Insertionsort(int a[], int n);
@@ -24,7 +24,7 @@ void copyArray(int source[], int dest[], int n) {
     }
 }
 
-// Hàm in mảng
+
 void printArray(int a[], int n) {
     for (int i = 0; i < n; i++) {
         cout << a[i] << " ";
@@ -32,7 +32,7 @@ void printArray(int a[], int n) {
     cout << endl;
 }
 
-// Hàm kiểm tra mảng đã được sắp xếp tăng dần chưa
+
 bool isSorted(int a[], int n) {
     for (int i = 0; i < n - 1; i++) {
         if (a[i] > a[i + 1]) {
@@ -42,7 +42,7 @@ bool isSorted(int a[], int n) {
     return true;
 }
 
-// Hàm test một thuật toán
+
 void testAlgorithm(string name, int original[], int n, int testCase) {
     cout << "\n--- Test case " << testCase << ": " << name << " ---" << endl;
     cout << "Mang ban dau: ";
@@ -76,7 +76,7 @@ void testAlgorithm(string name, int original[], int n, int testCase) {
 }
 
 int main() {
-    // Đọc dữ liệu từ file
+    
     ifstream file("test_sort_array_data.txt");
     
     if (!file.is_open()) {
@@ -95,11 +95,11 @@ int main() {
     int testCase = 1;
     int n;
     
-    // Đọc từng test case từ file
+    
     while (file >> n) {
         int original[1000];
         
-        // Đọc n phần tử của mảng
+        
         for (int i = 0; i < n; i++) {
             file >> original[i];
         }
@@ -108,7 +108,7 @@ int main() {
         cout << "TEST CASE " << testCase << " (n = " << n << ")" << endl;
         cout << "========================================" << endl;
         
-        // Test từng thuật toán
+       
         for (int i = 0; i < numAlgorithms; i++) {
             testAlgorithm(algorithms[i], original, n, testCase);
         }
